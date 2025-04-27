@@ -102,7 +102,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>Email: janhavitak2004@gmail.com</li>
               <li>Phone: +91-8079007548</li>
-              <li>Location: Delhi, India</li>
+              <li>Location: Punjab, India</li>
             </ul>
           </div>
         </div>

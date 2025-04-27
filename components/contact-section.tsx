@@ -90,12 +90,12 @@ export default function Contact() {
       value: "janhavitak2004@gmail.com",
       link: "mailto:janhavitak2004@gmail.com",
     },
-    {
-      icon: <MapPin className="h-4 w-4" />,
-      label: "Location",
-      value: "Delhi, India",
-      link: "https://maps.google.com/?q=Delhi,India",
-    },
+    // {
+    //   icon: <MapPin className="h-4 w-4" />,
+    //   label: "Location",
+    //   value: "Punjab, India",
+    //   link: "https://maps.google.com/?q=Delhi,India",
+    // },
   ]
 
   const socialLinks = [
@@ -196,7 +196,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <Card className="bg-gray-900 border-gray-800 overflow-hidden">
+          {/* <Card className="bg-gray-900 border-gray-800 overflow-hidden">
             <CardContent className="p-0">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.05313967705!2d76.76357065438654!3d28.643795352991304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1650439789073!5m2!1sen!2sin"
@@ -209,7 +209,7 @@ export default function Contact() {
                 title="Location Map"
               ></iframe>
             </CardContent>
-          </Card>
+          </Card> */}
         </motion.div>
 
         <motion.div
@@ -236,7 +236,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       className="bg-gray-800 border-gray-700 focus:border-purple-500"
-                      placeholder="John Doe"
+                      placeholder="Your name"
                     />
                   </div>
 
@@ -252,7 +252,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       className="bg-gray-800 border-gray-700 focus:border-purple-500"
-                      placeholder="john.doe@example.com"
+                      placeholder="abc@example.com"
                     />
                   </div>
                 </div>

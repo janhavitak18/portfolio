@@ -38,14 +38,14 @@ export default function Resume() {
               {[
                 {
                   degree: "Bachelor of Technology in Computer Science",
-                  institution: "Indian Institute of Technology",
-                  duration: "2020 - 2024",
-                  description: "Specialized in web development and data structures with a GPA of 3.8/4.0",
+                  institution: "Lovely Professional University",
+                  duration: "2022 - 2026",
+                  description: "Specialized in web development and data structures",
                 },
                 {
                   degree: "High School Diploma",
-                  institution: "Delhi Public School",
-                  duration: "2018 - 2020",
+                  institution: "Sanskar Public School",
+                  duration: "2020 - 2021",
                   description: "Graduated with distinction and received the Excellence in Computer Science award",
                 },
               ].map((edu, index) => (
@@ -66,7 +66,7 @@ export default function Resume() {
             </div>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="text-2xl font-bold text-purple-400 mb-6">Experience</h3>
 
             <div className="space-y-6">
@@ -108,11 +108,11 @@ export default function Resume() {
                 </motion.div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           <div className="flex justify-center pt-6">
             <Button asChild className="bg-purple-600 hover:bg-purple-700">
-              <Link href="/resume.pdf" download>
+              <Link href="/resume1.pdf" download>
                 <FileDown className="mr-2 h-4 w-4" /> Download Full Resume
               </Link>
             </Button>
@@ -153,7 +153,7 @@ export default function Resume() {
                 <div className="aspect-video">
                   <iframe
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                    src="#"
                     title="Video CV"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -169,7 +169,7 @@ export default function Resume() {
                 {[
                   { language: "English", level: "Professional", percent: 95 },
                   { language: "Hindi", level: "Native", percent: 100 },
-                  { language: "German", level: "Basic", percent: 40 },
+                  // { language: "Marwadi", level: "Basic", percent: 80 },
                 ].map((lang, index) => (
                   <div key={index} className="space-y-1">
                     <div className="flex justify-between">

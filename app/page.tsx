@@ -4,7 +4,7 @@ import About from "@/components/about-section"
 import Skills from "@/components/skills-section"
 import Projects from "@/components/projects-section"
 import Blogs from "@/components/blogs-section"
-import Testimonials from "@/components/testimonials-section"
+// import Testimonials from "@/components/testimonials-section"
 import Resume from "@/components/resume-section"
 import Certifications from "@/components/certifications-section"
 import Contact from "@/components/contact-section"
@@ -31,9 +31,7 @@ export default function Home() {
       <section id="blogs" className="py-20 bg-gray-950">
         <Blogs />
       </section>
-      <section id="testimonials" className="py-20">
-        <Testimonials />
-      </section>
+
       <section id="resume" className="py-20 bg-gray-950">
         <Resume />
       </section>

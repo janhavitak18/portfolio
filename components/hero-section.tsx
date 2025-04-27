@@ -101,7 +101,7 @@ export default function Hero() {
             </Button>
 
             <Button asChild variant="outline" className="border-pink-500 text-pink-500 hover:bg-pink-500/10">
-              <Link href="/resume.pdf" download>
+              <Link href="/resume1.pdf" download>
                 <FileDown className="mr-2 h-4 w-4" /> Download Resume
               </Link>
             </Button>
@@ -120,9 +120,9 @@ export default function Hero() {
             className="mt-16 hidden sm:block"
           >
             <div className="flex items-center">
-              <div className="h-px w-16 bg-gray-600"></div>
-              <span className="text-gray-400 text-sm px-4">Scroll Down</span>
-              <div className="h-px w-16 bg-gray-600"></div>
+              {/* <div className="h-px w-16 bg-gray-600"></div> */}
+              {/* <span className="text-gray-400 text-sm px-4">Scroll Down</span> */}
+              {/* <div className="h-px w-16 bg-gray-600"></div> */}
             </div>
             <motion.div
               animate={{ y: [0, 10, 0] }}

@@ -27,7 +27,7 @@ export default function Projects() {
       title: "EzyKart – E-Commerce Website",
       description:
         "A fully functional e-commerce platform with product catalog, shopping cart, user authentication, and payment integration.",
-      image: "/placeholder.svg?height=800&width=1200",
+      image: "/MaleFashion.png?height=800&width=1200",
       tags: ["React", "CSS", "JSX", "MongoDB"],
       github: "https://github.com/janhavitak18/EzyKart-Ecom",
       live: "https://ezykart-ecom.vercel.app",
@@ -37,7 +37,7 @@ export default function Projects() {
       title: "Trendify – Blog Website",
       description:
         "A modern blogging platform with content management, user authentication, comments, and responsive design.",
-      image: "/placeholder.svg?height=800&width=1200",
+      image: "/blog.jpg?height=800&width=1200",
       tags: ["HTML", "CSS", "JS", "NodeJS", "MongoDB"],
       github: "https://github.com/janhavitak18/trendify",
       live: "https://trendify-blog.vercel.app",
@@ -47,7 +47,7 @@ export default function Projects() {
       title: "Hospital Management System",
       description:
         "A comprehensive hospital management system with patient records, appointment scheduling, and billing management.",
-      image: "/placeholder.svg?height=800&width=1200",
+      image: "/hms.jpeg?height=800&width=1200",
       tags: ["PHP", "HTML", "CSS", "MySQL"],
       github: "https://github.com/janhavitak18/HMS.git",
     },
@@ -64,7 +64,7 @@ export default function Projects() {
       id: 5,
       title: "Weather App",
       description: "A real-time weather application with location detection, forecast, and interactive weather maps.",
-      image: "/placeholder.svg?height=800&width=1200",
+      image: "/weather.jpg?height=800&width=1200",
       tags: ["React", "API Integration", "CSS", "JavaScript"],
       github: "https://github.com/janhavitak18/weather-app",
     },
@@ -72,7 +72,7 @@ export default function Projects() {
       id: 6,
       title: "Task Management App",
       description: "A productivity application with task organization, reminders, and progress tracking features.",
-      image: "/placeholder.svg?height=800&width=1200",
+      image: "/taskManagement.png?height=800&width=1200",
       tags: ["React", "Redux", "Firebase", "Tailwind CSS"],
       github: "https://github.com/janhavitak18/task-manager",
     },
@@ -156,8 +156,83 @@ export default function Projects() {
           </motion.div>
         ))}
       </div>
-
       <AnimatePresence>
+  {selectedProject && (
+    <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40"
+        onClick={() => setSelectedProject(null)}
+      />
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9, y: 100 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.9, y: 100 }}
+        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        className="fixed inset-0 flex items-center justify-center z-50 p-4"
+      >
+        <div className="bg-gray-900 rounded-lg overflow-auto max-h-[90vh] w-full max-w-3xl relative shadow-2xl">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute right-2 top-2 z-50"
+            onClick={() => setSelectedProject(null)}
+          >
+            <X className="h-5 w-5" />
+          </Button>
+
+          <div className="relative h-64">
+            <Image
+              src={selectedProject.image || "/placeholder.svg"}
+              alt={selectedProject.title}
+              fill
+              className="object-cover rounded-t-lg"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent rounded-t-lg" />
+          </div>
+
+          <div className="p-6">
+            <h3 className="text-2xl font-bold text-purple-400 mb-2">{selectedProject.title}</h3>
+            <p className="text-gray-300 mb-6">{selectedProject.description}</p>
+
+            <div className="flex flex-wrap gap-2 mb-6">
+              {selectedProject.tags.map((tag) => (
+                <Badge key={tag} className="bg-purple-500/20 text-purple-300 border-purple-500/30">
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+
+            <div className="flex gap-4">
+              <Button asChild className="bg-purple-600 hover:bg-purple-700">
+                <Link href={selectedProject.github} target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-2 h-4 w-4" /> View Code
+                </Link>
+              </Button>
+
+              {selectedProject.live && (
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-pink-500 text-pink-500 hover:bg-pink-500/10"
+                >
+                  <Link href={selectedProject.live} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                  </Link>
+                </Button>
+              )}
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </>
+  )}
+</AnimatePresence>
+
+      {/* <AnimatePresence>
         {selectedProject && (
           <>
             <motion.div
@@ -228,7 +303,7 @@ export default function Projects() {
             </motion.div>
           </>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   )
 }
